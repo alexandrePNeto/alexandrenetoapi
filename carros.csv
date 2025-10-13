@@ -1,0 +1,241 @@
+nome,cor,porte,placa
+Chevrolet Onix,Branco,HAT,ASD-1092
+Volkswagen Polo,Prata,HAT,FGH-7812
+Hyundai HB20,Preto,HAT,JKL-3456
+Fiat Argo,Vermelho,HAT,MNO-9012
+Fiat Cronos,Cinza Chumbo,SEDAN,PQR-5678
+Fiat Mobi,Preto,HAT,STU-2345
+Jeep Renegade,Verde Musgo,SUV,VWX-8901
+Chevrolet Tracker,Azul Marinho,SUV,YZA-4567
+Volkswagen T-Cross,Branco,SUV,BCD-0123
+Nissan Kicks,Prata,SUV,EFG-6789
+Renault Kwid,Vermelho,HAT,HIJ-2345
+Ford Ka,Preto,HAT,KLM-8901
+Hyundai Creta,Cinza Chumbo,SUV,NOP-4567
+Toyota Corolla,Prata,SEDAN,QRS-0123
+Volkswagen Virtus,Branco,SEDAN,TUV-6789
+Chevrolet Onix Plus,Preto,SEDAN,WXY-3456
+Fiat Pulse,Verde Musgo,SUV,ZAB-9012
+Jeep Compass,Azul Marinho,SUV,CDE-5678
+Honda HR-V,Vermelho,SUV,FGH-1234
+Renault Sandero,Cinza Chumbo,HAT,IJK-7890
+Chevrolet Onix,Prata,HAT,LMN-3456
+Volkswagen Polo,Branco,HAT,OPQ-9012
+Hyundai HB20,Vermelho,HAT,RST-5678
+Fiat Argo,Preto,HAT,UVW-1234
+Fiat Cronos,Prata,SEDAN,XYZ-7890
+Fiat Mobi,Branco,HAT,ABC-3456
+Jeep Renegade,Preto,SUV,DEF-9012
+Chevrolet Tracker,Vermelho,SUV,GHI-5678
+Volkswagen T-Cross,Cinza Chumbo,SUV,JKL-1234
+Nissan Kicks,Azul Marinho,SUV,MNO-7890
+Renault Kwid,Prata,HAT,PQR-3456
+Ford Ka,Branco,HAT,STU-9012
+Hyundai Creta,Preto,SUV,VWX-5678
+Toyota Corolla,Vermelho,SEDAN,YZA-1234
+Volkswagen Virtus,Cinza Chumbo,SEDAN,BCD-7890
+Chevrolet Onix Plus,Azul Marinho,SEDAN,EFG-3456
+Fiat Pulse,Prata,SUV,HIJ-9012
+Jeep Compass,Branco,SUV,KLM-5678
+Honda HR-V,Preto,SUV,NOP-1234
+Renault Sandero,Vermelho,HAT,QRS-7890
+Chevrolet Onix,Cinza Chumbo,HAT,TUV-3456
+Volkswagen Polo,Azul Marinho,HAT,WXY-9012
+Hyundai HB20,Prata,HAT,ZAB-5678
+Fiat Argo,Branco,HAT,CDE-1234
+Fiat Cronos,Preto,SEDAN,FGH-7890
+Fiat Mobi,Vermelho,HAT,IJK-3456
+Jeep Renegade,Prata,SUV,LMN-9012
+Chevrolet Tracker,Branco,SUV,OPQ-5678
+Volkswagen T-Cross,Vermelho,SUV,RST-1234
+Nissan Kicks,Preto,SUV,UVW-7890
+Renault Kwid,Cinza Chumbo,HAT,XYZ-3456
+Ford Ka,Azul Marinho,HAT,ABC-9012
+Hyundai Creta,Prata,SUV,DEF-5678
+Toyota Corolla,Branco,SEDAN,GHI-1234
+Volkswagen Virtus,Vermelho,SEDAN,JKL-7890
+Chevrolet Onix Plus,Preto,SEDAN,MNO-3456
+Fiat Pulse,Cinza Chumbo,SUV,PQR-9012
+Jeep Compass,Azul Marinho,SUV,STU-5678
+Honda HR-V,Prata,SUV,VWX-1234
+Renault Sandero,Branco,HAT,YZA-7890
+Chevrolet Onix,Vermelho,HAT,BCD-3456
+Volkswagen Polo,Preto,HAT,EFG-9012
+Hyundai HB20,Cinza Chumbo,HAT,HIJ-5678
+Fiat Argo,Azul Marinho,HAT,KLM-1234
+Fiat Cronos,Prata,SEDAN,NOP-7890
+Fiat Mobi,Branco,HAT,QRS-3456
+Jeep Renegade,Vermelho,SUV,TUV-9012
+Chevrolet Tracker,Preto,SUV,WXY-5678
+Volkswagen T-Cross,Cinza Chumbo,SUV,ZAB-1234
+Nissan Kicks,Prata,SUV,CDE-7890
+Renault Kwid,Branco,HAT,FGH-3456
+Ford Ka,Vermelho,HAT,IJK-9012
+Hyundai Creta,Preto,SUV,LMN-5678
+Toyota Corolla,Cinza Chumbo,SEDAN,OPQ-1234
+Volkswagen Virtus,Azul Marinho,SEDAN,RST-7890
+Chevrolet Onix Plus,Prata,SEDAN,UVW-3456
+Fiat Pulse,Branco,SUV,XYZ-9012
+Jeep Compass,Vermelho,SUV,ABC-5678
+Honda HR-V,Preto,SUV,DEF-1234
+Renault Sandero,Cinza Chumbo,HAT,GHI-7890
+Chevrolet Onix,Azul Marinho,HAT,JKL-3456
+Volkswagen Polo,Prata,HAT,MNO-9012
+Hyundai HB20,Branco,HAT,PQR-5678
+Fiat Argo,Vermelho,HAT,STU-1234
+Fiat Cronos,Preto,SEDAN,VWX-7890
+Fiat Mobi,Cinza Chumbo,HAT,YZA-3456
+Jeep Renegade,Azul Marinho,SUV,BCD-9012
+Chevrolet Tracker,Prata,SUV,CDE-5678
+Volkswagen T-Cross,Branco,SUV,FGH-1234
+Nissan Kicks,Vermelho,SUV,HIJ-7890
+Renault Kwid,Preto,HAT,KLM-3456
+Ford Ka,Cinza Chumbo,HAT,NOP-9012
+Hyundai Creta,Azul Marinho,SUV,QRS-5678
+Toyota Corolla,Prata,SEDAN,TUV-1234
+Volkswagen Virtus,Branco,SEDAN,WXY-7890
+Chevrolet Onix Plus,Vermelho,SEDAN,ZAB-3456
+Fiat Pulse,Preto,SUV,ABC-9012
+Jeep Compass,Cinza Chumbo,SUV,DEF-5678
+Honda HR-V,Azul Marinho,SUV,GHI-1234
+Renault Sandero,Prata,HAT,JKL-7890
+Chevrolet Onix,Branco,HAT,MNO-3456
+Volkswagen Polo,Vermelho,HAT,PQR-9012
+Hyundai HB20,Preto,HAT,STU-5678
+Fiat Argo,Cinza Chumbo,HAT,VWX-1234
+Fiat Cronos,Azul Marinho,SEDAN,YZA-7890
+Fiat Mobi,Prata,HAT,BCD-3456
+Jeep Renegade,Branco,SUV,CDE-9012
+Chevrolet Tracker,Vermelho,SUV,FGH-5678
+Volkswagen T-Cross,Preto,SUV,HIJ-1234
+Nissan Kicks,Cinza Chumbo,SUV,KLM-7890
+Renault Kwid,Azul Marinho,HAT,NOP-3456
+Ford Ka,Prata,HAT,QRS-9012
+Hyundai Creta,Branco,SUV,TUV-5678
+Toyota Corolla,Vermelho,SEDAN,WXY-1234
+Volkswagen Virtus,Preto,SEDAN,ZAB-7890
+Chevrolet Onix Plus,Cinza Chumbo,SEDAN,ABC-3456
+Fiat Pulse,Azul Marinho,SUV,DEF-9012
+Jeep Compass,Prata,SUV,GHI-5678
+Honda HR-V,Branco,SUV,JKL-1234
+Renault Sandero,Vermelho,HAT,MNO-7890
+Chevrolet Onix,Preto,HAT,OPQ-3456
+Volkswagen Polo,Cinza Chumbo,HAT,RST-9012
+Hyundai HB20,Azul Marinho,HAT,UVW-5678
+Fiat Argo,Prata,HAT,XYZ-1234
+Fiat Cronos,Branco,SEDAN,ABC-7890
+Fiat Mobi,Vermelho,HAT,DEF-3456
+Jeep Renegade,Preto,SUV,GHI-9012
+Chevrolet Tracker,Cinza Chumbo,SUV,JKL-5678
+Volkswagen T-Cross,Azul Marinho,SUV,MNO-1234
+Nissan Kicks,Prata,SUV,NOP-7890
+Renault Kwid,Branco,HAT,PQR-3456
+Ford Ka,Vermelho,HAT,STU-9012
+Hyundai Creta,Preto,SUV,VWX-5678
+Toyota Corolla,Cinza Chumbo,SEDAN,YZA-1234
+Volkswagen Virtus,Azul Marinho,SEDAN,BCD-7890
+Chevrolet Onix Plus,Prata,SEDAN,CDE-3456
+Fiat Pulse,Branco,SUV,FGH-9012
+Jeep Compass,Vermelho,SUV,HIJ-5678
+Honda HR-V,Preto,SUV,KLM-1234
+Renault Sandero,Cinza Chumbo,HAT,NOP-7890
+Chevrolet Onix,Azul Marinho,HAT,QRS-3456
+Volkswagen Polo,Prata,HAT,TUV-9012
+Hyundai HB20,Branco,HAT,WXY-5678
+Fiat Argo,Vermelho,HAT,ZAB-1234
+Fiat Cronos,Preto,SEDAN,ABC-7890
+Fiat Mobi,Cinza Chumbo,HAT,DEF-3456
+Jeep Renegade,Azul Marinho,SUV,GHI-9012
+Chevrolet Tracker,Prata,SUV,JKL-5678
+Volkswagen T-Cross,Branco,SUV,MNO-1234
+Nissan Kicks,Vermelho,SUV,NOP-7890
+Renault Kwid,Preto,HAT,PQR-3456
+Ford Ka,Cinza Chumbo,HAT,STU-9012
+Hyundai Creta,Azul Marinho,SUV,VWX-5678
+Toyota Corolla,Prata,SEDAN,YZA-1234
+Volkswagen Virtus,Branco,SEDAN,BCD-7890
+Chevrolet Onix Plus,Vermelho,SEDAN,CDE-3456
+Fiat Pulse,Preto,SUV,FGH-9012
+Jeep Compass,Cinza Chumbo,SUV,HIJ-5678
+Honda HR-V,Azul Marinho,SUV,KLM-1234
+Renault Sandero,Prata,HAT,NOP-7890
+Chevrolet Onix,Branco,HAT,QRS-3456
+Volkswagen Polo,Vermelho,HAT,TUV-9012
+Hyundai HB20,Preto,HAT,WXY-5678
+Fiat Argo,Cinza Chumbo,HAT,ZAB-1234
+Fiat Cronos,Azul Marinho,SEDAN,ABC-7890
+Fiat Mobi,Prata,HAT,DEF-3456
+Jeep Renegade,Branco,SUV,GHI-9012
+Chevrolet Tracker,Vermelho,SUV,JKL-5678
+Volkswagen T-Cross,Preto,SUV,MNO-1234
+Nissan Kicks,Cinza Chumbo,SUV,NOP-7890
+Renault Kwid,Azul Marinho,HAT,PQR-3456
+Ford Ka,Prata,HAT,STU-9012
+Hyundai Creta,Branco,SUV,VWX-5678
+Toyota Corolla,Vermelho,SEDAN,YZA-1234
+Volkswagen Virtus,Preto,SEDAN,BCD-7890
+Chevrolet Onix Plus,Cinza Chumbo,SEDAN,CDE-3456
+Fiat Pulse,Azul Marinho,SUV,FGH-9012
+Jeep Compass,Prata,SUV,HIJ-5678
+Honda HR-V,Branco,SUV,KLM-1234
+Renault Sandero,Vermelho,HAT,NOP-7890
+Chevrolet Onix,Preto,HAT,QRS-3456
+Volkswagen Polo,Cinza Chumbo,HAT,TUV-9012
+Hyundai HB20,Azul Marinho,HAT,WXY-5678
+Fiat Argo,Prata,HAT,ZAB-1234
+Fiat Cronos,Branco,SEDAN,ABC-7890
+Fiat Mobi,Vermelho,HAT,DEF-3456
+Jeep Renegade,Preto,SUV,GHI-9012
+Chevrolet Tracker,Cinza Chumbo,SUV,JKL-5678
+Volkswagen T-Cross,Azul Marinho,SUV,MNO-1234
+Nissan Kicks,Prata,SUV,NOP-7890
+Renault Kwid,Branco,HAT,PQR-3456
+Ford Ka,Vermelho,HAT,STU-9012
+Hyundai Creta,Preto,SUV,VWX-5678
+Toyota Corolla,Cinza Chumbo,SEDAN,YZA-1234
+Volkswagen Virtus,Azul Marinho,SEDAN,BCD-7890
+Chevrolet Onix Plus,Prata,SEDAN,CDE-3456
+Fiat Pulse,Branco,SUV,FGH-9012
+Jeep Compass,Vermelho,SUV,HIJ-5678
+Honda HR-V,Preto,SUV,KLM-1234
+Renault Sandero,Cinza Chumbo,HAT,NOP-7890
+Chevrolet Onix,Azul Marinho,HAT,QRS-3456
+Volkswagen Polo,Prata,HAT,TUV-9012
+Hyundai HB20,Branco,HAT,WXY-5678
+Fiat Argo,Vermelho,HAT,ZAB-1234
+Fiat Cronos,Preto,SEDAN,ABC-7890
+Fiat Mobi,Cinza Chumbo,HAT,DEF-3456
+Jeep Renegade,Azul Marinho,SUV,GHI-9012
+Chevrolet Tracker,Prata,SUV,JKL-5678
+Volkswagen T-Cross,Branco,SUV,MNO-1234
+Nissan Kicks,Vermelho,SUV,NOP-7890
+Renault Kwid,Preto,HAT,PQR-3456
+Ford Ka,Cinza Chumbo,HAT,STU-9012
+Hyundai Creta,Azul Marinho,SUV,VWX-5678
+Toyota Corolla,Prata,SEDAN,YZA-1234
+Volkswagen Virtus,Branco,SEDAN,BCD-7890
+Chevrolet Onix Plus,Vermelho,SEDAN,CDE-3456
+Fiat Pulse,Preto,SUV,FGH-9012
+Jeep Compass,Cinza Chumbo,SUV,HIJ-5678
+Honda HR-V,Azul Marinho,SUV,KLM-1234
+Renault Sandero,Prata,HAT,NOP-7890
+Chevrolet Onix,Branco,HAT,QRS-3456
+Volkswagen Polo,Vermelho,HAT,TUV-9012
+Hyundai HB20,Preto,HAT,WXY-5678
+Fiat Argo,Cinza Chumbo,HAT,ZAB-1234
+Fiat Cronos,Azul Marinho,SEDAN,ABC-7890
+Fiat Mobi,Prata,HAT,DEF-3456
+Jeep Renegade,Branco,SUV,GHI-9012
+Chevrolet Tracker,Vermelho,SUV,JKL-5678
+Volkswagen T-Cross,Preto,SUV,MNO-1234
+Nissan Kicks,Cinza Chumbo,SUV,NOP-7890
+Renault Kwid,Azul Marinho,HAT,PQR-3456
+Ford Ka,Prata,HAT,STU-9012
+Hyundai Creta,Branco,SUV,VWX-5678
+Toyota Corolla,Vermelho,SEDAN,YZA-1234
+Volkswagen Virtus,Preto,SEDAN,BCD-7890
+Chevrolet Onix Plus,Cinza Chumbo,SEDAN,CDE-3456
+Fiat Pulse,Azul Marinho,SUV,FGH-9012
+Jeep Compass,Prata,SUV,HIJ-5678
+Honda HR-V,Branco,SUV,KLM-1234
+Renault Sandero,Vermelho,HAT,NOP-7890

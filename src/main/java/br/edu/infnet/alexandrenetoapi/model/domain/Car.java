@@ -1,9 +1,23 @@
 package br.edu.infnet.alexandrenetoapi.model.domain;
 
+import jakarta.persistence.Id;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+
+import jakarta.validation.constraints.NotNull;
+
+@Entity
 public class Car {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
+
+    @NotNull(message = "Nome é obrigatório")
     private String name;
+    @NotNull(message = "Cor é obrigatória")
     private String color;
+    @NotNull(message = "Placa é obrigatória")
     private String plate;
     private String size;
 

@@ -27,6 +27,24 @@
 					"response": []
 				},
 				{
+					"name": "Get Car",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{hostApi}}/cars/1",
+							"host": [
+								"{{hostApi}}"
+							],
+							"path": [
+								"cars",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "New Car",
 					"request": {
 						"method": "POST",
@@ -47,6 +65,62 @@
 							],
 							"path": [
 								"cars"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Put Car",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Corsa\",\r\n    \"color\": \"Verde Rosa\",\r\n    \"plate\": \"AFT-1562\",\r\n    \"size\": \"SEDAN\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{hostApi}}/cars/1",
+							"host": [
+								"{{hostApi}}"
+							],
+							"path": [
+								"cars",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Change Color",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Corsa\",\r\n    \"color\": \"Verde Rosa\",\r\n    \"plate\": \"AFT-1562\",\r\n    \"size\": \"SEDAN\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{hostApi}}/cars/1/change-color/vermelho",
+							"host": [
+								"{{hostApi}}"
+							],
+							"path": [
+								"cars",
+								"1",
+								"change-color",
+								"vermelho"
 							]
 						}
 					},

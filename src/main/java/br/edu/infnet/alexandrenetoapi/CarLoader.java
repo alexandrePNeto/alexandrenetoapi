@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import org.springframework.boot.ApplicationArguments;
 
 import br.edu.infnet.alexandrenetoapi.model.domain.Car;
-import br.edu.infnet.alexandrenetoapi.model.domain.service.CarService;
+import br.edu.infnet.alexandrenetoapi.model.service.CarService;
 
 @Component
 public class CarLoader implements ApplicationRunner {
@@ -24,7 +24,6 @@ public class CarLoader implements ApplicationRunner {
     public void run(ApplicationArguments args) throws Exception {
         FileReader fileRead = new FileReader("carros.csv");
         BufferedReader fileBuffer = new BufferedReader(fileRead);
-
 
         while(true) {
             String line = fileBuffer.readLine();

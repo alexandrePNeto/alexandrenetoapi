@@ -10,34 +10,30 @@
 			"name": "Cars",
 			"item": [
 				{
-					"name": "Get all cars",
+					"name": "Get all",
 					"request": {
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{hostApi}}/cars",
+							"raw": "{{hostApiCar}}",
 							"host": [
-								"{{hostApi}}"
-							],
-							"path": [
-								"cars"
+								"{{hostApiCar}}"
 							]
 						}
 					},
 					"response": []
 				},
 				{
-					"name": "Get Car",
+					"name": "Get one",
 					"request": {
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{hostApi}}/cars/1",
+							"raw": "{{hostApiCar}}/1",
 							"host": [
-								"{{hostApi}}"
+								"{{hostApiCar}}"
 							],
 							"path": [
-								"cars",
 								"1"
 							]
 						}
@@ -45,7 +41,120 @@
 					"response": []
 				},
 				{
-					"name": "New Car",
+					"name": "New",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Corsa\",\r\n    \"color\": \"Verde Escuto\",\r\n    \"plate\": \"AFT-1562\",\r\n    \"size\": \"SEDAN\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{hostApiCar}}",
+							"host": [
+								"{{hostApiCar}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update one",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Corsa\",\r\n    \"color\": \"Verde Rosa\",\r\n    \"plate\": \"AFT-1562\",\r\n    \"size\": \"SEDAN\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{hostApi}}/1",
+							"host": [
+								"{{hostApi}}"
+							],
+							"path": [
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Change Color",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Corsa\",\r\n    \"color\": \"Verde Rosa\",\r\n    \"plate\": \"AFT-1562\",\r\n    \"size\": \"SEDAN\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{hostApi}}/1/change-color/rosa",
+							"host": [
+								"{{hostApi}}"
+							],
+							"path": [
+								"1",
+								"change-color",
+								"rosa"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Attendant",
+			"item": [
+				{
+					"name": "Get all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{hostApiAttendant}}",
+							"host": [
+								"{{hostApiAttendant}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get one",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{hostApiAttendant}}/1",
+							"host": [
+								"{{hostApiAttendant}}"
+							],
+							"path": [
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New",
 					"request": {
 						"method": "POST",
 						"header": [],
@@ -71,7 +180,7 @@
 					"response": []
 				},
 				{
-					"name": "Put Car",
+					"name": "Update one",
 					"request": {
 						"method": "PUT",
 						"header": [],
@@ -85,42 +194,12 @@
 							}
 						},
 						"url": {
-							"raw": "{{hostApi}}/cars/1",
+							"raw": "{{hostApiAttendant}}/1",
 							"host": [
-								"{{hostApi}}"
+								"{{hostApiAttendant}}"
 							],
 							"path": [
-								"cars",
 								"1"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Change Color",
-					"request": {
-						"method": "PATCH",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"Corsa\",\r\n    \"color\": \"Verde Rosa\",\r\n    \"plate\": \"AFT-1562\",\r\n    \"size\": \"SEDAN\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{hostApi}}/cars/1/change-color/vermelho",
-							"host": [
-								"{{hostApi}}"
-							],
-							"path": [
-								"cars",
-								"1",
-								"change-color",
-								"vermelho"
 							]
 						}
 					},
@@ -135,6 +214,7 @@
 			"script": {
 				"type": "text/javascript",
 				"packages": {},
+				"requests": {},
 				"exec": [
 					""
 				]
@@ -145,6 +225,7 @@
 			"script": {
 				"type": "text/javascript",
 				"packages": {},
+				"requests": {},
 				"exec": [
 					""
 				]
@@ -159,6 +240,14 @@
 		{
 			"key": "hostApi",
 			"value": "http://127.0.0.1:8080/api"
+		},
+		{
+			"key": "hostApiCar",
+			"value": ""
+		},
+		{
+			"key": "hostApiAttendant",
+			"value": ""
 		}
 	]
 }

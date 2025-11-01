@@ -4,6 +4,7 @@ import java.util.Map;
 import java.time.LocalDateTime;
 import java.util.HashMap;
 
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.FieldError;
@@ -42,13 +43,23 @@ public class GlobalExceptionHandler {
         return new ResponseEntity<Map<String, Map<String, String>>>(map, HttpStatus.BAD_REQUEST);
     }
 
+    @ExceptionHandler(DataIntegrityViolationException.class)
+    public ResponseEntity<Map<String, String>> handlerDataIntegrityViolationException(DataIntegrityViolationException e) {
+        Map<String, String> mapInfo = new HashMap<String, String>();
+        mapInfo.put("timestamp", LocalDateTime.now().toString());
+        mapInfo.put("context", "Request");
+        mapInfo.put("error", e.getMessage());
+
+        return new ResponseEntity<Map<String, String>>(mapInfo, HttpStatus.CONFLICT);
+    }
+
     @ExceptionHandler(CarException.class)
     public ResponseEntity<Map<String, String>> handlerCarException(CarException e) {
         return new ResponseEntity<Map<String, String>>(e.getMap(), HttpStatus.BAD_REQUEST);
     }
 
     @ExceptionHandler(ClientException.class)
-    public ResponseEntity<Map<String, String>> handlerCarException(ClientException e) {
+    public ResponseEntity<Map<String, String>> handlerCleintException(ClientException e) {
         return new ResponseEntity<Map<String, String>>(e.getMap(), HttpStatus.BAD_REQUEST);
     }
 

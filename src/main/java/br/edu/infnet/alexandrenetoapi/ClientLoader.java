@@ -37,7 +37,7 @@ public class ClientLoader implements ApplicationRunner {
 
                 String[] columns = line.split(",");
 
-                clientService.create(new Client(columns[0], columns[1]));
+                clientService.create(new Client(columns[0], columns[1], columns[2]));
             }
 
             fileBuffer.close();

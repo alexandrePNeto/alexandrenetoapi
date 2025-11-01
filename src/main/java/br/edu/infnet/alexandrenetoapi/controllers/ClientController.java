@@ -57,4 +57,8 @@ public class ClientController {
     public ResponseEntity<List<Car>> getAllCarsClientById(@PathVariable Integer id) {
         return ResponseEntity.status(HttpStatus.FOUND).body(service.getAllClientCarsById(id));
     }
+    @GetMapping("/email/{email}")
+    public ResponseEntity<Client> getClientByEmail(@PathVariable String email) {
+        return ResponseEntity.status(HttpStatus.FOUND).body(service.readByEmail(email));
+    }
 }

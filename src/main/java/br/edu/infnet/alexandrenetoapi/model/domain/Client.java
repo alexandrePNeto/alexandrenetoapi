@@ -6,15 +6,20 @@ import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.OneToMany;
+import jakarta.validation.constraints.Email;
 
 @Entity
 public class Client extends Person {
     public Client() { }
 
-    public Client(String name, String cpf) {
+    public Client(String name, String cpf, String email) {
         setName(name);
         setCpf(cpf);
+        setEmail(email);
     }
+
+    @Email
+    private String email;
 
     @OneToMany(
         mappedBy = "client",
@@ -39,5 +44,13 @@ public class Client extends Person {
 
     public void setCars(List<Car> cars) {
         this.cars = cars;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 }

@@ -87,6 +87,18 @@ public class ClientService implements CrudService<Client, Integer>  {
         );
     }
 
+    public Client readByEmail(String email) {
+        if(email == null || email.trim().isEmpty()) {
+            throw new IllegalArgumentException("Email informado é inváldio");
+        }
+
+        return clientRepository.findByEmailIgnoreCase(email).orElseThrow(
+            () -> new ClientException(
+                String.format("Cliente não encontrado com o email %s.",  email)
+            )
+        );
+    }
+
     public List<Car> getAllClientCarsById(Integer id) {
         Client client = readById(id);
         return carService.getCarsByClientId(client.getId());

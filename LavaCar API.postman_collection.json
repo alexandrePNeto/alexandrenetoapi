@@ -240,6 +240,24 @@
 					"response": []
 				},
 				{
+					"name": "Get one by email",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{hostApiClient}}/email/joao.silva@infnet.br",
+							"host": [
+								"{{hostApiClient}}"
+							],
+							"path": [
+								"email",
+								"joao.silva@infnet.br"
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "Get all cars",
 					"request": {
 						"method": "GET",

@@ -44,12 +44,12 @@ public class AttendantController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Attendant> carById(@PathVariable Integer id) {
+    public ResponseEntity<Attendant> attendantById(@PathVariable Integer id) {
         return ResponseEntity.ok(attendantService.readById(id));
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deleteCarById(@PathVariable Integer id) {
+    public ResponseEntity<Void> deleteAttendantById(@PathVariable Integer id) {
         attendantService.delete(id);
         return ResponseEntity.noContent().build();
     }
@@ -59,5 +59,8 @@ public class AttendantController {
         return ResponseEntity.status(HttpStatus.ACCEPTED).body(attendantService.update(id, entity));
     }
 
-    // TODO, criar um método que faça uma consulta específica usando o queryMethod
+    @GetMapping("/name/{name}")
+    public ResponseEntity<Attendant> attendantByName(@PathVariable String name) {
+        return ResponseEntity.ok(attendantService.readByName(name));
+    }
 }

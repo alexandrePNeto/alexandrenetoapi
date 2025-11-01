@@ -14,11 +14,10 @@ import br.edu.infnet.alexandrenetoapi.model.service.AttendantService;
 
 @Component
 public class AttendantLoader implements ApplicationRunner {
-    private final ApiCepFeignClient apiCepFeignClient;
     private final AttendantService attendantService;
+
     public AttendantLoader(AttendantService attendantService, ApiCepFeignClient apiCepFeignClient) {
         this.attendantService = attendantService;
-        this.apiCepFeignClient = apiCepFeignClient;
     }
 
     @Override
@@ -37,9 +36,10 @@ public class AttendantLoader implements ApplicationRunner {
 
             String[] columns = line.split(",");
 
+            attendant.setRegistration(columns[0]);
             attendant.setName(columns[1]);
-            attendant.setRegistration(columns[4]);
-            attendant.setAddress(apiCepFeignClient.findByCep(columns[3]));
+            attendant.setCpf(columns[4]);
+            attendant.setCep(columns[3]);
 
             attendantService.create(attendant);
         }

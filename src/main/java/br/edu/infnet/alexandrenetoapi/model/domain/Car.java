@@ -54,7 +54,7 @@ public class Car {
     }
 
     public void setName(String name) {
-        this.name = name;
+        this.name = name.toUpperCase();
     }
 
     public void setId(Integer id) {
@@ -62,7 +62,7 @@ public class Car {
     }
 
     public void setColor(String color) {
-        this.color = color;
+        this.color = color.toUpperCase();
     }
 
     public void setPlate(String plate) {
@@ -70,7 +70,7 @@ public class Car {
     }
 
     public void setSize(String size) {
-        this.size = size;
+        this.size = size.toUpperCase();
     }
 
     @Override

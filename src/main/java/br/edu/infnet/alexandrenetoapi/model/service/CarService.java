@@ -1,6 +1,8 @@
 package br.edu.infnet.alexandrenetoapi.model.service;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 import org.springframework.stereotype.Service;
 
@@ -82,5 +84,41 @@ public class CarService implements CrudService<Car, Integer> {
         }
 
         return carRepository.findById(id).orElseThrow(() -> new CarException("Carro não encontrado."));
+    }
+
+    public ArrayList<Car> readCarsByColor(String color) {
+        if (color == null || color.trim().isEmpty()) {
+            return new ArrayList<>();
+        }
+
+        List<Car> resultList = carRepository.findAllByColor(color.trim().toUpperCase());
+        return new ArrayList<>(resultList);
+    }
+
+    public ArrayList<Car> readCarsBySize(String size) {
+        if (size == null || size.trim().isEmpty()) {
+            return new ArrayList<>();
+        }
+
+        List<Car> resultList = carRepository.findAllBySize(size.trim().toUpperCase());
+        return new ArrayList<>(resultList);
+    }
+
+    public ArrayList<Car> readCarsByColorAndSize(String color, String size) {
+        if (color == null || color.trim().isEmpty() || size == null || size.trim().isEmpty()) {
+            return new ArrayList<>();
+        }
+
+        List<Car> resultList = carRepository.findAllByColorAndSize(color.trim().toUpperCase(), size.trim().toUpperCase());
+        return new ArrayList<>(resultList);
+    }
+
+    public ArrayList<Car> searchCarsByName(String nameTerm) {
+        if (nameTerm == null || nameTerm.trim().isEmpty()) {
+            return new ArrayList<>();
+        }
+
+        List<Car> resultList = carRepository.findAllByNameContaining(nameTerm.trim().toUpperCase());
+        return new ArrayList<>(resultList);
     }
 }

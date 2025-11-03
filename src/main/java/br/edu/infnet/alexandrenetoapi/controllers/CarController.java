@@ -3,6 +3,7 @@ package br.edu.infnet.alexandrenetoapi.controllers;
 import java.util.ArrayList;
 
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import org.springframework.http.HttpStatus;
@@ -64,5 +65,49 @@ public class CarController {
     @PatchMapping("/{id}/change-color/{color}")
     public ResponseEntity<Car> changeColor(@PathVariable Integer id, @PathVariable String color) {
         return ResponseEntity.status(HttpStatus.ACCEPTED).body(carService.changeColor(id, color));
+    }
+
+    @GetMapping("/color/{color}")
+    public ResponseEntity<ArrayList<Car>> carsByColor(@PathVariable String color) {
+        ArrayList<Car> carList = carService.readCarsByColor(color);
+
+        if (carList.isEmpty()) {
+            return ResponseEntity.noContent().build();
+        }
+
+        return ResponseEntity.status(HttpStatus.OK).body(carList);
+    }
+
+    @GetMapping("/size/{size}")
+    public ResponseEntity<ArrayList<Car>> carsBySize(@PathVariable String size) {
+        ArrayList<Car> carList = carService.readCarsBySize(size);
+
+        if (carList.isEmpty()) {
+            return ResponseEntity.noContent().build();
+        }
+
+        return ResponseEntity.status(HttpStatus.OK).body(carList);
+    }
+
+    @GetMapping("/color/{color}/size/{size}")
+    public ResponseEntity<ArrayList<Car>> carsByColorAndSize(@PathVariable String color, @PathVariable String size) {
+        ArrayList<Car> carList = carService.readCarsByColorAndSize(color, size);
+
+        if (carList.isEmpty()) {
+            return ResponseEntity.noContent().build();
+        }
+
+        return ResponseEntity.status(HttpStatus.OK).body(carList);
+    }
+
+    @GetMapping("/search")
+    public ResponseEntity<ArrayList<Car>> searchCarsByName(@RequestParam String name) {
+        ArrayList<Car> carList = carService.searchCarsByName(name);
+
+        if (carList.isEmpty()) {
+            return ResponseEntity.noContent().build();
+        }
+
+        return ResponseEntity.status(HttpStatus.OK).body(carList);
     }
 }

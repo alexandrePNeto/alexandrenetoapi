@@ -116,6 +116,85 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "Get by color",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{hostApiCar}}/color/prata",
+							"host": [
+								"{{hostApiCar}}"
+							],
+							"path": [
+								"color",
+								"prata"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get by size",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{hostApiCar}}/size/suv",
+							"host": [
+								"{{hostApiCar}}"
+							],
+							"path": [
+								"size",
+								"suv"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{hostApiCar}}/search?name=civic",
+							"host": [
+								"{{hostApiCar}}"
+							],
+							"path": [
+								"search"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "civic"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get by size and color Copy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{hostApiCar}}/color/prata/size/suv",
+							"host": [
+								"{{hostApiCar}}"
+							],
+							"path": [
+								"color",
+								"prata",
+								"size",
+								"suv"
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		},
@@ -245,13 +324,13 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{hostApiClient}}/email/joao.silva@infnet.br",
+							"raw": "{{hostApiClient}}/email/joAo.silva@infnet.br",
 							"host": [
 								"{{hostApiClient}}"
 							],
 							"path": [
 								"email",
-								"joao.silva@infnet.br"
+								"joAo.silva@infnet.br"
 							]
 						}
 					},

@@ -17,10 +17,6 @@ public class CarService implements CrudService<Car, Integer> {
     }
 
     private void checkCar(Car car) {
-        if(car == null) {
-            throw new IllegalArgumentException("Objeto inválido");
-        }
-
 		if(car.getName() == null || car.getName().trim().isEmpty()) {
 			throw new CarException("Nome é obrigatório");
 		} else if(car.getPlate() == null || car.getPlate().trim().isEmpty()) {
@@ -32,7 +28,12 @@ public class CarService implements CrudService<Car, Integer> {
 
     @Override
     public Car create(Car car) {
+        if(car == null) {
+            throw new IllegalArgumentException("Objeto inválido");
+        }
+
         checkCar(car);
+
         return carRepository.save(car);
     }
 
@@ -41,16 +42,30 @@ public class CarService implements CrudService<Car, Integer> {
         return new ArrayList<Car>(carRepository.findAll());
     }
 
+    public ArrayList<Car> getCarsByClientId(Integer clientId) {
+        return new ArrayList<Car>(carRepository.findAllByClientId(clientId));
+    }
+
     @Override
     public Car update(Integer id, Car car) {
+        if(car == null) {
+            throw new IllegalArgumentException("Objeto inválido");
+        }
+
         checkCar(car);
+
         car.setId(id);
+
         return carRepository.save(car);
     }
 
     @Override
     public void delete(Integer id) {
         Car car = readById(id);
+        if(car == null) {
+            return;
+        }
+
         carRepository.delete(car);
     }
 

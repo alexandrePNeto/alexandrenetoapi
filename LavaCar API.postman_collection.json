@@ -10,34 +10,30 @@
 			"name": "Cars",
 			"item": [
 				{
-					"name": "Get all cars",
+					"name": "Get all",
 					"request": {
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{hostApi}}/cars",
+							"raw": "{{hostApiCar}}",
 							"host": [
-								"{{hostApi}}"
-							],
-							"path": [
-								"cars"
+								"{{hostApiCar}}"
 							]
 						}
 					},
 					"response": []
 				},
 				{
-					"name": "Get Car",
+					"name": "Get one",
 					"request": {
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{hostApi}}/cars/1",
+							"raw": "{{hostApiCar}}/1",
 							"host": [
-								"{{hostApi}}"
+								"{{hostApiCar}}"
 							],
 							"path": [
-								"cars",
 								"1"
 							]
 						}
@@ -45,7 +41,7 @@
 					"response": []
 				},
 				{
-					"name": "New Car",
+					"name": "New",
 					"request": {
 						"method": "POST",
 						"header": [],
@@ -59,19 +55,16 @@
 							}
 						},
 						"url": {
-							"raw": "{{hostApi}}/cars",
+							"raw": "{{hostApiCar}}",
 							"host": [
-								"{{hostApi}}"
-							],
-							"path": [
-								"cars"
+								"{{hostApiCar}}"
 							]
 						}
 					},
 					"response": []
 				},
 				{
-					"name": "Put Car",
+					"name": "Update one",
 					"request": {
 						"method": "PUT",
 						"header": [],
@@ -85,12 +78,11 @@
 							}
 						},
 						"url": {
-							"raw": "{{hostApi}}/cars/1",
+							"raw": "{{hostApi}}/1",
 							"host": [
 								"{{hostApi}}"
 							],
 							"path": [
-								"cars",
 								"1"
 							]
 						}
@@ -112,15 +104,212 @@
 							}
 						},
 						"url": {
-							"raw": "{{hostApi}}/cars/1/change-color/vermelho",
+							"raw": "{{hostApi}}/1/change-color/rosa",
 							"host": [
 								"{{hostApi}}"
 							],
 							"path": [
-								"cars",
 								"1",
 								"change-color",
-								"vermelho"
+								"rosa"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Attendant",
+			"item": [
+				{
+					"name": "Get all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{hostApiAttendant}}",
+							"host": [
+								"{{hostApiAttendant}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get one",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{hostApiAttendant}}/1",
+							"host": [
+								"{{hostApiAttendant}}"
+							],
+							"path": [
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get one by name",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{hostApiAttendant}}/name/Alexandre Santos",
+							"host": [
+								"{{hostApiAttendant}}"
+							],
+							"path": [
+								"name",
+								"Alexandre Santos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Alexandre Philippus Neto\",\r\n    \"cpf\": \"000.000.111-88\",\r\n    \"registration\": \"358.12947.01\",\r\n    \"cep\": \"89256-184\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{hostApiAttendant}}",
+							"host": [
+								"{{hostApiAttendant}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update one",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Alexandre Philippus Netooo\",\r\n    \"cpf\": \"000.000.111-88\",\r\n    \"registration\": \"358.12947.01\",\r\n    \"cep\": \"01001-001\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{hostApiAttendant}}/9",
+							"host": [
+								"{{hostApiAttendant}}"
+							],
+							"path": [
+								"9"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Clients",
+			"item": [
+				{
+					"name": "Get all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{hostApiClient}}",
+							"host": [
+								"{{hostApiClient}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get one by email",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{hostApiClient}}/email/joao.silva@infnet.br",
+							"host": [
+								"{{hostApiClient}}"
+							],
+							"path": [
+								"email",
+								"joao.silva@infnet.br"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all cars",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{hostApiClient}}/2/cars",
+							"host": [
+								"{{hostApiClient}}"
+							],
+							"path": [
+								"2",
+								"cars"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get one",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{hostApiClient}}/1",
+							"host": [
+								"{{hostApiClient}}"
+							],
+							"path": [
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"João Silva\",\r\n    \"cpf\": \"999.001.001-01\",\r\n    \"cars\": [\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{hostApiClient}}",
+							"host": [
+								"{{hostApiClient}}"
 							]
 						}
 					},
@@ -135,6 +324,7 @@
 			"script": {
 				"type": "text/javascript",
 				"packages": {},
+				"requests": {},
 				"exec": [
 					""
 				]
@@ -145,6 +335,7 @@
 			"script": {
 				"type": "text/javascript",
 				"packages": {},
+				"requests": {},
 				"exec": [
 					""
 				]
@@ -159,6 +350,19 @@
 		{
 			"key": "hostApi",
 			"value": "http://127.0.0.1:8080/api"
+		},
+		{
+			"key": "hostApiCar",
+			"value": ""
+		},
+		{
+			"key": "hostApiAttendant",
+			"value": ""
+		},
+		{
+			"key": "hostApiClient",
+			"value": "",
+			"type": "default"
 		}
 	]
 }

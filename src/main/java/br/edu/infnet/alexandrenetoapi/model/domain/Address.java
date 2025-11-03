@@ -1,16 +1,9 @@
 package br.edu.infnet.alexandrenetoapi.model.domain;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.Embeddable;
 
-@Entity
+@Embeddable
 public class Address {
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer id;
-
 	private String cep;
 	private String logradouro;
 	private String bairro;
@@ -31,12 +24,6 @@ public class Address {
 	        );
 	}
 
-	public Integer getId() {
-		return id;
-	}
-	public void setId(Integer id) {
-		this.id = id;
-	}
 	public String getCep() {
 		return cep;
 	}

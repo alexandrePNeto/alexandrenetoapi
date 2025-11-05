@@ -12,7 +12,7 @@ import br.edu.infnet.alexandrenetoapi.model.domain.Client;
 import br.edu.infnet.alexandrenetoapi.model.repositories.ClientRepository;
 
 @Service
-public class ClientService implements CrudService<Client, Integer>  {
+public class ClientService implements CrudService<Client, Integer> {
     private final ClientRepository clientRepository;
     private final CarService carService;
 

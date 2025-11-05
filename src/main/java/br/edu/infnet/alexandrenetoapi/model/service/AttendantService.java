@@ -92,4 +92,8 @@ public class AttendantService implements CrudService<Attendant, Integer> {
                 )
             );
     }
+
+    public Long countTotalAttendants() {
+        return attendantRepository.count();
+    }
 }

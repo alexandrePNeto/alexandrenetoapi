@@ -3,7 +3,6 @@ package br.edu.infnet.alexandrenetoapi;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.ArrayList;
 
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
@@ -15,7 +14,7 @@ import br.edu.infnet.alexandrenetoapi.model.service.ClientService;
 import jakarta.validation.ConstraintViolationException;
 
 @Component
-@Order(1)
+@Order(2)
 public class ClientLoader implements ApplicationRunner {
     private final ClientService clientService;
 

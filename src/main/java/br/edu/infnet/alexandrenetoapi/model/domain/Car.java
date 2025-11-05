@@ -3,10 +3,16 @@ package br.edu.infnet.alexandrenetoapi.model.domain;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.validation.constraints.NotNull;
@@ -20,8 +26,10 @@ public class Car {
 
     @NotNull(message = "Nome é obrigatório")
     private String name;
+
     @NotNull(message = "Cor é obrigatória")
     private String color;
+
     @NotNull(message = "Placa é obrigatória")
     private String plate;
 
@@ -32,6 +40,9 @@ public class Car {
     @JsonBackReference
     @JoinColumn(name = "client_id", nullable = false)
     private Client client;
+
+    @OneToMany(mappedBy = "car", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
+    private List<ServiceCar> serviceCars = new ArrayList<>();
 
     public Integer getId() {
         return id;
@@ -90,5 +101,13 @@ public class Car {
 
     public void setClient(Client client) {
         this.client = client;
+    }
+
+    public List<ServiceCar> getServiceCars() {
+        return serviceCars;
+    }
+
+    public void setServiceCars(List<ServiceCar> serviceCars) {
+        this.serviceCars = serviceCars;
     }
 }

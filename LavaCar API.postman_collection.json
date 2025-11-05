@@ -159,7 +159,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{hostApiCar}}/search?name=civic",
+							"raw": "{{hostApiCar}}/search?name=fiat",
 							"host": [
 								"{{hostApiCar}}"
 							],
@@ -169,7 +169,7 @@
 							"query": [
 								{
 									"key": "name",
-									"value": "civic"
+									"value": "fiat"
 								}
 							]
 						}
@@ -395,6 +395,104 @@
 					"response": []
 				}
 			]
+		},
+		{
+			"name": "Services",
+			"item": [
+				{
+					"name": "Get all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{hostApiService}}",
+							"host": [
+								"{{hostApiService}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get one",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{hostApiService}}/1",
+							"host": [
+								"{{hostApiService}}"
+							],
+							"path": [
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get by attendant",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{hostApiService}}/attendant/1",
+							"host": [
+								"{{hostApiService}}"
+							],
+							"path": [
+								"attendant",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get cars by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{hostApiService}}/2/cars",
+							"host": [
+								"{{hostApiService}}"
+							],
+							"path": [
+								"2",
+								"cars"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{hostApiService}}/1",
+							"host": [
+								"{{hostApiService}}"
+							],
+							"path": [
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
 		}
 	],
 	"event": [
@@ -440,8 +538,11 @@
 		},
 		{
 			"key": "hostApiClient",
-			"value": "",
-			"type": "default"
+			"value": ""
+		},
+		{
+			"key": "hostApiService",
+			"value": ""
 		}
 	]
 }

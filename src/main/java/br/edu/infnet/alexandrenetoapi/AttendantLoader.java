@@ -8,6 +8,7 @@ import java.util.ArrayList;
 
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
+import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
 import br.edu.infnet.alexandrenetoapi.clients.ApiCepFeignClient;
@@ -15,6 +16,7 @@ import br.edu.infnet.alexandrenetoapi.model.domain.Attendant;
 import br.edu.infnet.alexandrenetoapi.model.service.AttendantService;
 import jakarta.validation.ConstraintViolationException;
 
+@Order(1)
 @Component
 public class AttendantLoader implements ApplicationRunner {
     private final AttendantService attendantService;

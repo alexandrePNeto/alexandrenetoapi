@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 
 import br.edu.infnet.alexandrenetoapi.exceptions.CarException;
 import br.edu.infnet.alexandrenetoapi.exceptions.ClientException;
+import br.edu.infnet.alexandrenetoapi.exceptions.ServiceException;
 
 import org.springframework.web.bind.MethodArgumentNotValidException;
 
@@ -60,6 +61,11 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler(ClientException.class)
     public ResponseEntity<Map<String, String>> handlerCleintException(ClientException e) {
+        return new ResponseEntity<Map<String, String>>(e.getMap(), HttpStatus.BAD_REQUEST);
+    }
+
+    @ExceptionHandler(ServiceException.class)
+    public ResponseEntity<Map<String, String>> handlerServiceException(ServiceException e) {
         return new ResponseEntity<Map<String, String>>(e.getMap(), HttpStatus.BAD_REQUEST);
     }
 

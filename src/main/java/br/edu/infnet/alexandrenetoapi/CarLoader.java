@@ -14,7 +14,7 @@ import br.edu.infnet.alexandrenetoapi.model.domain.Car;
 import br.edu.infnet.alexandrenetoapi.model.service.CarService;
 import br.edu.infnet.alexandrenetoapi.model.service.ClientService;
 
-@Order(2)
+@Order(3)
 @Component
 public class CarLoader implements ApplicationRunner {
     private final CarService carService;

@@ -3,7 +3,6 @@ package br.edu.infnet.alexandrenetoapi;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.ArrayList;
 
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
@@ -12,9 +11,10 @@ import org.springframework.stereotype.Component;
 
 import br.edu.infnet.alexandrenetoapi.model.domain.Client;
 import br.edu.infnet.alexandrenetoapi.model.service.ClientService;
+import jakarta.validation.ConstraintViolationException;
 
 @Component
-@Order(1)
+@Order(2)
 public class ClientLoader implements ApplicationRunner {
     private final ClientService clientService;
 
@@ -24,11 +24,11 @@ public class ClientLoader implements ApplicationRunner {
 
     @Override
     public void run(ApplicationArguments args) throws Exception {
-        try {
-            FileReader fileRead = new FileReader("clientes.csv");
-            BufferedReader fileBuffer = new BufferedReader(fileRead);
+        FileReader fileRead = new FileReader("clientes.csv");
+        BufferedReader fileBuffer = new BufferedReader(fileRead);
 
-            while(true) {
+        while(true) {
+            try {
                 String line = fileBuffer.readLine();
 
                 if(line == null) {
@@ -38,18 +38,18 @@ public class ClientLoader implements ApplicationRunner {
                 String[] columns = line.split(",");
 
                 clientService.create(new Client(columns[0], columns[1], columns[2]));
+            } catch(IOException e) {
+                System.err.println(e.toString());
+            } catch(ConstraintViolationException e) {
+                System.err.println(String.format(" -> ERROR: %s", e.toString()));
+                continue;
             }
+        }
 
-            fileBuffer.close();
+        fileBuffer.close();
 
-            ArrayList<Client> clients = clientService.readAll();
-
-            for (Client client : clients) {
-                System.out.println(client);
-            }
-        } catch(IOException e) {
-            System.err.println(String.format(" -> ERROR: %s", e.toString()));
+        for (Client client : clientService.readAll()) {
+            System.out.println(client);
         }
     }
-
 }

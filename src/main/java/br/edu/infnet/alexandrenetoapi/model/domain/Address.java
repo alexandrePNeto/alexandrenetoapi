@@ -1,9 +1,11 @@
 package br.edu.infnet.alexandrenetoapi.model.domain;
 
 import jakarta.persistence.Embeddable;
+import jakarta.validation.constraints.Pattern;
 
 @Embeddable
 public class Address {
+	@Pattern(regexp = "^\\d{5}-?\\d{3}$", message = "CEP deve conter um valor válido")
 	private String cep;
 	private String logradouro;
 	private String bairro;

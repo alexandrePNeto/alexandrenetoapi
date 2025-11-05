@@ -1,5 +1,6 @@
 package br.edu.infnet.alexandrenetoapi.model.domain;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 import jakarta.persistence.CascadeType;
@@ -16,6 +17,7 @@ public class Client extends Person {
         setName(name);
         setCpf(cpf);
         setEmail(email);
+        setRegistrerDate(LocalDateTime.now());
     }
 
     @Email
